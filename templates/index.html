@@ -1,0 +1,88 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auto Insurance Customer Prediction</title>
+    <style>
+      body {
+      background-image: url("/static/css/car_bg.jpg");
+        font-family: Arial, sans-serif;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        padding: 10px;
+        transition: transform 0.2s ease-in-out;
+      }
+
+      .column {
+        flex: 1;
+        padding: 30px;
+        cursor: pointer;
+        text-align: center;
+        align-items: center;
+        transition: transform 0.2s ease-in-out;
+      }
+
+      .column:hover {
+        transform: scale(1.1);
+      }
+
+      .single {
+        background-color: #badf64;
+        text-align: center;
+        align-items: center;
+      }
+
+      .multiple {
+        background-color: #f07272;
+        text-align: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Motor Insurance Churn Prediction</h1>
+      <h5>Application to predict Car Insurance Customer Churns (Online & Batch) </h5>
+    </header>
+    
+    <div class="container" style="text-align:center;">
+    
+      <a href="/home">
+        <div class="column single">
+          <h2 style="color:black;text-decoration:none;">Single User Prediction</h2>
+        </div>
+      </a>
+    </div>
+    <div class="container">
+      <a href="/excelupload">
+        <div class="column multiple">
+          <h2 style="color:black;text-decoration:none;"> Bulk User Prediction </h2>
+        </div>
+      </a>
+    </div>
+    <script>
+      function openUserPage() {
+        window.location.href = "/home";
+      }
+
+      function openAdminPage() {
+        window.location.href = "/excelupload";
+      }
+    </script>
+  </body>
+</html>
