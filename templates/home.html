@@ -1,0 +1,199 @@
+<html>
+  <head>
+    
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <title>Insurance Churn Prediction</title>
+    <div class="background">
+      <div class="container">
+        <div class="row">
+          <form action="/predict" method="POST">
+            <div class="col-sm-9">
+
+	      <div class="form-group">
+                <label for="customer_id">Customer ID: [Numeric value]</label>
+                
+                <input
+                  type="number"
+                  id="customer_id"
+                  name="customer_id"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="Monthly_Premium">Monthly_Premium: [Enter monthly Premium Value (Numeric value)]</label>
+                <input
+                  type="number"
+                  id="Monthly_Premium"
+                  name="Monthly_Premium"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="weeks_since_claim">Weeks Since Claim: [Enter number of weeks elapsed since last claim]</label>
+
+                <input
+                  type="number"
+                  id="weeks_since_claim"
+                  name="weeks_since_claim"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="open_policies">Opened Policies: [Enter your number of Open policies]</label>
+
+                <input
+                  type="number"
+                  id="open_policies"
+                  name="open_policies"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="Renew_Offer_Type">Renew Offer Type: [Enter number of Renewal done]</label>
+
+                <input
+                  type="number"
+                  id="Renew_Offer_Type"
+                  name="Renew_Offer_Type"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="Vehicle_Age_In_Years">Vehicle Age (In Years):</label>
+                <input
+                  type="number"
+                  id="Vehicle_Age_In_Years"
+                  name="Vehicle_Age_In_Years"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="Premium_Increase_In_Percent">Premium Increase In Percent:</label>
+                <input
+                  type="number"
+                  id="Premium_Increase_In_Percent"
+                  name="Premium_Increase_In_Percent"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="Claims_Processingtime_In_Days">Claims Processing Time In Days:</label>
+                <input
+                  type="number"
+                  id="Claims_Processingtime_In_Days"
+                  name="Claims_Processingtime_In_Days"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="Coverage_Type">Coverage Type</label>
+
+                <select id="Coverage_Type" name="Coverage_Type">
+                  <option value="Primary_Plan">Primary Plan</option>
+                  <option value="Extended_Plan">Extended Plan</option>
+                  <option value="Premium_Plan">Premium Plan</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="work_status">Work Status:</label>
+
+                <select id="work_status" name="work_status">
+                  <option value="unemployed">Unemployed</option>
+
+                  <option value="retired">Retired</option>
+
+                  <option value="medical_leave">Medical Leave</option>
+
+                  <option value="employed">Employed</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="Accessbility">Accessbility:</label>
+
+                <select id="Accessbility" name="Accessbility">
+                  <option value="Direct_Branch_Contact">Direct Branch Contact</option>
+                  <option value="Customer_Call_Centre">Customer Call Centre</option>
+                  <option value="agents">Agents</option>
+                  <option value="Website">Website</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="type_of_vehicle">Type of Vehicle:</label>
+
+                <select id="type_of_vehicle" name="type_of_vehicle">
+                  <option value="Sedan_4 Door">Sedan_4 Door</option>
+                  <option value="SUV">SUV</option>
+                  <option value="Sports_Car">Sports Car</option>
+                  <option value="Luxirious_Car">Luxirious Car</option>
+                  <option value="Luxurious_SUV">Luxurious SUV</option>
+                  <option value="Coupe_2 Door">Coupe_2 Door</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="city">City:</label>
+
+                <select id="city" name="city">
+                  <option value="Indianapolis">Indianapolis</option>
+
+                  <option value="Tampa">Tampa</option>
+
+                  <option value="Fairfield">Fairfield</option>
+
+                  <option value="Boston">Boston</option>
+
+                  <option value="Denver">Denver</option>
+                </select>
+              </div>
+               <div class="form-group">
+                <label for="gender">Gender :</label>
+
+                <select id="gender" name="gender">
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                </select>
+              </div>
+               
+            </div>
+            <div class="col-sm-3">
+              <button type="submit" class="btn btn-primary" name="submit">
+                Predict
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-9">
+          <label for="comment">Prediction Result:</label>
+            <textarea
+              class="form-control"
+              rows="2"
+              id="comment"
+              name="query6"
+              rows="2"
+              cols="5"
+            >
+{{output1}}</textarea
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
