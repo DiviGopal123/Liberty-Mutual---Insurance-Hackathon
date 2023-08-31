@@ -1,0 +1,4 @@
+Customer_ID,City,Work_Status,Gender,Coverage_Type,Accessbility,Vehicle_Type,Monthly_Premium,Open_Policies,Renew_Offer_Type,Vehicle_Age_In_Years,Weeks_Since_Claim,Premium_Increase_In_Percent,Claims_Processingtime_In_Days,Churn_Prediction
+10000000,Indianapolis,Employed,Female,Primary_Plan,Agents,Coupe_2 Door,138,1,1,10,138,5,15,No
+10000005,Denver,Retired,Female,Primary_Plan,Website,Sports Car,138,2,2,2,60,2,31,Yes
+10000042,Boston,Employed,Female,Extended_Plan,Agents,Sedan_4 Door,198,1,2,4,52,3,34,Yes
